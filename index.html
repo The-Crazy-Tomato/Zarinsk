@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Заринский политехнический техникум — официальный сайт</title>
+    <meta name="description" content="КГБПОУ «Заринский политехнический техникум» — государственное профессиональное образовательное учреждение в г. Заринск, Алтайский край">
+    
+    <!-- Подключаем шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========== ЕДИНЫЙ СТИЛЬ ========== */
+        :root {
+            --bg-color: #fcfbf4;
+            --green-accent: #88b3a0;
+            --dark-blue: #4a4e69;
+            --text-color: #333;
+            --white: #ffffff;
+            --primary: #2c5f8a;
+            --primary-dark: #1e3e5c;
+            --secondary: #f5a623;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+        
+        a { text-decoration: none; color: inherit; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* ===== ШАПКА ===== */
+        header {
+            background-color: var(--bg-color);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #e0ddd0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav-bar {
+            background-color: var(--green-accent);
+            border-radius: 20px;
+            padding: 10px 30px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .nav-bar a {
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 5px 10px;
+            transition: var(--transition);
+        }
+        
+        .nav-bar a:hover, .nav-bar a.active {
+            background-color: var(--dark-blue);
+            border-radius: 15px;
+            text-decoration: none;
+        }
+        
+        /* ===== Секции ===== */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section__title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark-blue);
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--green-accent), var(--primary));
+            border-radius: 2px;
+        }
+        
+        /* ===== Герой-секция с фоновой картинкой ===== */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(30, 62, 92, 0.9), rgba(44, 95, 138, 0.85)), 
+                        url('http://zpt.edu22.info/includes/history/P1060531.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 140px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero__title {
+            font-size: 3.2rem;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .hero__subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.98;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        .hero__buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* ===== Кнопки ===== */
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.05rem;
+            box-shadow: var(--shadow);
+        }
+        .btn--primary { 
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark)); 
+            color: white; 
+        }
+        .btn--primary:hover { 
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary)); 
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        .btn--secondary { 
+            background: linear-gradient(135deg, var(--secondary), #e09612); 
+            color: white; 
+        }
+        .btn--secondary:hover { 
+            background: linear-gradient(135deg, #e09612, var(--secondary)); 
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        .btn--outline { 
+            background: transparent; 
+            border: 2px solid var(--green-accent); 
+            color: var(--dark-blue); 
+        }
+        .btn--outline:hover { 
+            background: var(--green-accent); 
+            color: white; 
+        }
+        
+        /* ===== Блоки ===== */
+        .welcome-block { 
+            background: linear-gradient(135deg, #f4f1e6, #e8e4d5); 
+            border-radius: 25px; 
+            padding: 50px; 
+            display: flex; 
+            gap: 40px; 
+            align-items: center; 
+            margin-bottom: 50px; 
+            flex-wrap: wrap;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--green-accent);
+        }
+        .welcome-text { flex: 1; }
+        .welcome-text h2 { 
+            color: var(--dark-blue); 
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .welcome-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--green-accent);
+        }
+        .welcome-text p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .info-block { 
+            background: linear-gradient(135deg, var(--dark-blue), var(--primary)); 
+            color: var(--white); 
+            border-radius: 25px; 
+            padding: 50px; 
+            margin-bottom: 50px;
+            box-shadow: var(--shadow-hover);
+        }
+        .info-list ul { 
+            padding-left: 0;
+            list-style: none;
+        }
+        .info-list li { 
+            margin-bottom: 18px;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        .info-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--green-accent);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        /* Карточки о техникуме */
+        .about__grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 35px; 
+            margin-bottom: 50px; 
+        }
+        .about__card { 
+            background: var(--white); 
+            padding: 40px 30px; 
+            border-radius: 20px; 
+            text-align: center; 
+            box-shadow: var(--shadow); 
+            transition: var(--transition);
+            border-top: 4px solid var(--green-accent);
+        }
+        .about__card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: var(--shadow-hover); 
+        }
+        .about__card-img { 
+            width: 80px; 
+            height: 80px; 
+            margin: 0 auto 20px; 
+            object-fit: contain; 
+        }
+        .about__card h3 { 
+            margin-bottom: 15px; 
+            color: var(--dark-blue);
+            font-size: 1.3rem;
+        }
+        .about__director { 
+            background: linear-gradient(135deg, var(--primary), var(--dark-blue)); 
+            color: white; 
+            padding: 50px; 
+            border-radius: 25px; 
+            margin-top: 40px; 
+            text-align: center;
+            box-shadow: var(--shadow-hover);
+        }
+        .about__director blockquote p { 
+            font-size: 1.3rem; 
+            font-style: italic; 
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        /* История */
+        .history-section { 
+            background: linear-gradient(135deg, #f4f1e6, #e8e4d5);
+            padding: 80px 0;
+        }
+        .history-content-wrapper {
+            background: white;
+            border-radius: 30px;
+            padding: 60px;
+            box-shadow: var(--shadow);
+            margin-bottom: 50px;
+        }
+        .history-text {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: var(--text-color);
+            text-align: justify;
+        }
+        .history-text p {
+            margin-bottom: 25px;
+            text-indent: 40px;
+        }
+        .history-text h3 {
+            color: var(--dark-blue);
+            font-size: 1.8rem;
+            margin: 40px 0 25px;
+            text-indent: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--green-accent);
+        }
+        .history-images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .history-img-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        .history-img-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+        .history-img-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+        .history-img-caption {
+            background: var(--dark-blue);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        /* Специальности */
+        .specialties-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 35px; 
+            margin-bottom: 60px; 
+        }
+        .specialty-card { 
+            background: white; 
+            border-radius: 25px; 
+            padding: 35px; 
+            box-shadow: var(--shadow); 
+            transition: 0.3s;
+            border-left: 5px solid var(--green-accent);
+        }
+        .specialty-card:hover { 
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        .specialty-card h3 { 
+            color: var(--dark-blue); 
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .specialty-card ul { 
+            list-style: none;
+            padding: 0;
+        }
+        .specialty-card li { 
+            padding: 10px 0 10px 30px; 
+            position: relative;
+            font-size: 1.05rem;
+        }
+        .specialty-card li:before { 
+            content: "▸"; 
+            color: var(--green-accent); 
+            position: absolute; 
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .stats-section { 
+            background: linear-gradient(135deg, var(--green-accent), var(--primary)); 
+            border-radius: 30px; 
+            padding: 60px; 
+            text-align: center; 
+            color: white;
+            box-shadow: var(--shadow-hover);
+        }
+        .stats-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 35px; 
+            margin-top: 40px; 
+        }
+        .stat-card { 
+            background: rgba(255,255,255,0.95); 
+            border-radius: 25px; 
+            padding: 35px; 
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        .stat-number { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            color: var(--dark-blue); 
+            display: block;
+            margin-bottom: 10px;
+        }
+        .stat-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Новости с картинками */
+        .news-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
+            gap: 35px; 
+        }
+        .news-card { 
+            background: white; 
+            border-radius: 25px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow); 
+            transition: 0.3s;
+        }
+        .news-card:hover { 
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        .news-img { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover;
+            display: block;
+        }
+        .news-content { 
+            padding: 25px; 
+        }
+        .news-date { 
+            color: var(--green-accent); 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .news-date::before {
+            content: "📅";
+        }
+        .news-title { 
+            color: var(--dark-blue); 
+            font-size: 1.3rem; 
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        /* Расписание */
+        .schedule-section { 
+            background: linear-gradient(135deg, #f4f1e6, #e8e4d5); 
+            border-radius: 30px; 
+            padding: 50px; 
+            margin: 60px 0;
+            box-shadow: var(--shadow);
+        }
+        .schedule-filters { 
+            display: flex; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            margin-bottom: 40px; 
+            justify-content: center; 
+        }
+        .schedule-filters select, 
+        .schedule-filters button { 
+            padding: 14px 28px; 
+            border-radius: 50px; 
+            border: none; 
+            font-size: 1rem; 
+            cursor: pointer; 
+            background: white;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .schedule-filters select:hover,
+        .schedule-filters button { 
+            background: var(--green-accent); 
+            color: white; 
+            font-weight: bold;
+        }
+        .schedule-filters button:hover { 
+            background: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+        .schedule-table { 
+            overflow-x: auto; 
+            background: white; 
+            border-radius: 25px; 
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+        }
+        th, td { 
+            border: 1px solid #e0e0e0; 
+            padding: 15px; 
+            text-align: left; 
+            vertical-align: top; 
+        }
+        th { 
+            background: linear-gradient(135deg, var(--dark-blue), var(--primary)); 
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover {
+            background: #f9f9f9;
+        }
+        .lesson { 
+            margin-bottom: 10px; 
+            padding: 8px 12px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            border-left: 3px solid var(--green-accent);
+        }
+        .lesson:last-child { 
+            margin-bottom: 0; 
+        }
+        
+        /* Формы */
+        .slider-section { 
+            min-height: 600px; 
+            margin: 60px 0;
+            background: linear-gradient(135deg, #f4f1e6, #e8e4d5);
+            border-radius: 30px;
+            padding: 50px;
+        }
+        .slide { 
+            display: none; 
+            animation: fade 0.6s; 
+            gap: 40px; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            align-items: center;
+        }
+        .slide.active { 
+            display: flex; 
+        }
+        @keyframes fade { 
+            from { opacity: 0.4; transform: translateX(20px); } 
+            to { opacity: 1; transform: translateX(0); } 
+        }
+        .open-day-form, 
+        .application-form { 
+            background: white; 
+            padding: 45px; 
+            border-radius: 25px; 
+            flex: 1; 
+            min-width: 320px;
+            max-width: 500px;
+            box-shadow: var(--shadow-hover);
+        }
+        .application-form h2 {
+            color: var(--dark-blue);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        .form-field, 
+        .form-group { 
+            margin-bottom: 20px; 
+        }
+        .form-field label, 
+        .form-group label { 
+            display: block; 
+            font-weight: 600; 
+            margin-bottom: 8px;
+            color: var(--dark-blue);
+        }
+        .form-field input, 
+        .form-group input, 
+        .form-group select { 
+            width: 100%; 
+            padding: 14px 18px; 
+            border-radius: 12px; 
+            border: 2px solid #e0e0e0;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .form-field input:focus,
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--green-accent);
+            box-shadow: 0 0 0 3px rgba(136, 179, 160, 0.2);
+        }
+        .open-day-card { 
+            flex: 1; 
+            border-radius: 25px; 
+            overflow: hidden; 
+            background: var(--dark-blue); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 380px;
+            box-shadow: var(--shadow-hover);
+        }
+        .card-img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
+        .slider-controls { 
+            display: flex; 
+            justify-content: center; 
+            gap: 25px; 
+            margin-top: 30px; 
+            align-items: center; 
+        }
+        .dot { 
+            height: 16px; 
+            width: 16px; 
+            background: var(--dark-blue); 
+            border-radius: 50%; 
+            cursor: pointer; 
+            opacity: 0.3;
+            transition: var(--transition);
+        }
+        .dot.active { 
+            opacity: 1; 
+            background: var(--green-accent);
+            transform: scale(1.2);
+        }
+        .arrow-control { 
+            font-size: 2.5rem; 
+            cursor: pointer; 
+            color: var(--green-accent); 
+            font-weight: bold;
+            transition: var(--transition);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            box-shadow: var(--shadow);
+        }
+        .arrow-control:hover {
+            background: var(--green-accent);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* АБИТУРИЕНТУ */
+        .admission-section {
+            background: linear-gradient(135deg, var(--green-accent), var(--primary));
+            padding: 80px 0;
+        }
+        .admission-section .section__title {
+            color: white;
+        }
+        .admission-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 40px;
+        }
+        .admission-card {
+            background: white; 
+            padding: 45px; 
+            border-radius: 25px;
+            box-shadow: var(--shadow-hover);
+        }
+        .admission-card h3 {
+            color: var(--dark-blue);
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--green-accent);
+        }
+        .admission-card ol,
+        .admission-card p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .admission-card ol {
+            padding-left: 25px;
+        }
+        .admission-card li {
+            margin-bottom: 12px;
+        }
+        
+        /* Контакты */
+        .contacts-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 50px; 
+        }
+        .contacts-info, 
+        .map-container { 
+            background: linear-gradient(135deg, #f4f1e6, #e8e4d5); 
+            padding: 45px; 
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+        }
+        .contacts-info h2 {
+            color: var(--dark-blue);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--green-accent);
+        }
+        .contacts-info p {
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contacts-info strong {
+            color: var(--dark-blue);
+            min-width: 120px;
+        }
+        .map-container iframe { 
+            width: 100%; 
+            height: 350px; 
+            border-radius: 20px; 
+            border: none;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Футер */
+        footer { 
+            background: linear-gradient(135deg, var(--dark-blue), var(--primary)); 
+            color: white; 
+            padding: 60px 0 30px; 
+            margin-top: 80px;
+        }
+        .footer-content { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 50px; 
+        }
+        .footer-section h3 { 
+            margin-bottom: 20px; 
+            color: var(--green-accent);
+            font-size: 1.4rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+        .footer-section p,
+        .footer-section a { 
+            display: block; 
+            margin-bottom: 10px; 
+            color: #e0e0e0;
+            transition: var(--transition);
+            font-size: 1.05rem;
+        }
+        .footer-section a:hover { 
+            color: var(--green-accent);
+            padding-left: 5px;
+        }
+        .footer-bottom { 
+            text-align: center; 
+            padding: 30px; 
+            border-top: 1px solid rgba(255,255,255,0.2); 
+            margin-top: 50px;
+            color: #ccc;
+        }
+        
+        /* Кнопка вверх */
+        .scroll-top { 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            width: 55px; 
+            height: 55px; 
+            background: linear-gradient(135deg, var(--green-accent), var(--primary)); 
+            color: white; 
+            border: none; 
+            border-radius: 50%; 
+            font-size: 28px; 
+            cursor: pointer; 
+            opacity: 0; 
+            visibility: hidden; 
+            transition: var(--transition); 
+            z-index: 999;
+            box-shadow: var(--shadow-hover);
+        }
+        .scroll-top.show { 
+            opacity: 1; 
+            visibility: visible; 
+        }
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .hero__title { font-size: 2rem; }
+            .hero__subtitle { font-size: 1.1rem; }
+            .section__title { font-size: 1.8rem; }
+            .history-content-wrapper { padding: 30px; }
+            .history-text { font-size: 1rem; }
+            .history-text p { text-indent: 20px; }
+            .welcome-block,
+            .info-block,
+            .about__director,
+            .stats-section,
+            .schedule-section,
+            .slider-section { padding: 30px; }
+            .nav-bar { gap: 12px; padding: 8px 16px; }
+            .nav-bar a { font-size: 0.85rem; padding: 5px 8px; }
+            .btn { padding: 12px 24px; font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="nav-bar">
+        <a href="#home" class="active">главная</a>
+        <a href="#history">история</a>
+        <a href="#specialties-page">специальности</a>
+        <a href="#news-page">новости</a>
+        <a href="#schedule">расписание</a>
+        <a href="#contacts-page">контакты</a>
+        <a href="#admission-block">абитуриенту</a>
+    </nav>
+</header>
+
+<!-- ========== ГЛАВНАЯ С КАРТИНКОЙ КОЛЛЕДЖА НА ЗАДНЕМ ПЛАНЕ ========== -->
+<section id="home" class="hero">
+    <div class="hero__content">
+        <h1 class="hero__title">Добро пожаловать!</h1>
+        <p class="hero__subtitle">
+            Двери техникума всегда открыты для всех желающих обучаться: получить востребованную рынком труда профессию, повысить квалификацию, получить новую или дополнительную квалификацию.
+        </p>
+        <div class="hero__buttons">
+            <a href="#specialties-page" class="btn btn--primary">Наши специальности</a>
+            <a href="#admission-block" class="btn btn--secondary">Поступить</a>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section class="welcome-block">
+        <div class="welcome-text">
+            <h2>Добро пожаловать!</h2>
+            <p>Двери техникума всегда открыты для всех желающих обучаться: получить востребованную рынком труда профессию, повысить квалификацию, получить новую или дополнительную квалификацию.</p>
+            <p>Уважаемые родители, студенты, социальные партнеры! Сегодня много говорят о прозрачности системы образования. Мы стремимся к открытому диалогу с каждым.</p>
+            <p><strong>Email:</strong> zpt@22edu.ru (в теме письма пишите «диалог»)</p>
+        </div>
+    </section>
+
+    <section class="info-block">
+        <div class="info-list">
+            <ul>
+                <li>Готовим кадры для промышленности и сервиса Алтайского края с 1965 года.</li>
+                <li>8 современных мастерских и лабораторий. Оборудование как на реальном производстве.</li>
+                <li>Партнёры — «Алтай-кокс», «Заринский хлебкомбинат», предприятия города.</li>
+                <li>90% выпускников работают по специальности в первый год после выпуска.</li>
+                <li>Мастера производственного обучения — практики с предприятий. Индивидуальный подход к каждому студенту.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- О техникуме -->
+    <section id="about">
+        <h2 class="section__title">О техникуме</h2>
+        <div class="about__grid">
+            <div class="about__card">
+                <img class="about__card-img" src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" alt="здание">
+                <h3>Государственное учреждение</h3>
+                <p>Краевое государственное бюджетное профессиональное образовательное учреждение.</p>
+            </div>
+            <div class="about__card">
+                <img class="about__card-img" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="педагоги">
+                <h3>Опытные педагоги</h3>
+                <p>Квалифицированный преподавательский состав.</p>
+            </div>
+            <div class="about__card">
+                <img class="about__card-img" src="https://cdn-icons-png.flaticon.com/512/2948/2948032.png" alt="трудоустройство">
+                <h3>Трудоустройство</h3>
+                <p>Служба содействия трудоустройству выпускников.</p>
+            </div>
+            <div class="about__card">
+                <img class="about__card-img" src="https://cdn-icons-png.flaticon.com/512/2997/2997924.png" alt="мастерские">
+                <h3>Современные мастерские</h3>
+                <p>Учебно-производственные мастерские с новым оборудованием.</p>
+            </div>
+        </div>
+    
+    </section>
+</div>
+
+<!-- ИСТОРИЯ С ПОЛНЫМ ТЕКСТОМ И 3 КАРТИНКАМИ -->
+<section id="history" class="history-section">
+    <div class="container">
+        <h2 class="section__title">История техникума</h2>
+        <div class="history-content-wrapper">
+            <div class="history-text">
+                <h3>«Это наша с тобой биография»</h3>
+                <p><em>(исторический очерк о КГБПОУ "Заринский политехнический техникум")</em></p>
+                
+                <p>С середины 1970-х годов в г.Заринске началось строительство первенца черной металлургии Алтайского края Алтайского коксохимического завода, имевшего огромное значение для народного хозяйства. Наряду с этим стало увеличиваться и население города, в связи с чем возникла потребность в кадрах, особенно высококвалифицированных рабочих отрасли машиностроения и металлообработки. Попытки подготовки кадров в стенах учебных комбинатов предприятий не давали полного и перспективного развития кадрового потенциала. Открытие профессионального училища позволило заложить перспективное развитие профессиональной подготовки.</p>
+                
+                <p>Приказом Государственного Комитета РСФСР по профессионально-техническому образованию № 399 от 14.10.1981 г. образовано КГБОУ НПО ПУ-41. Училище открыло свои двери 1 сентября 1982 г. Первый набор составил 163 человека по 6 специальностям.</p>
+                
+                <p>Сегодня ПУ-41 готовит рабочих по 16 специальностям, востребованным основными сферами жизнедеятельности города: промышленностью, строительством, общественным питанием, торговлей, обслуживанием. Но приоритетными для нас были и остаются рабочие профессии: сварщик, станочник, электромонтер, слесарь-ремонтник, машинист-аппаратчик коксохимического производства.</p>
+                
+                <p>Вначале новоявленному учебному заведению пришлось испытать немало трудностей. Учебный процесс проходил одновременно с введением в строй производственных помещений и лабораторий. Но все трудности становления в скором времени были преодолены благодаря настойчивости и энтузиазму как педагогического коллектива, так и самих учащихся.</p>
+                
+                <p>Среди первых преподавателей и мастеров производственного обучения как сегодня работающих в училище, так и находящихся на заслуженном отдыхе были С.В.Трубачев, И.В.Сидорова, О.Г.Сараева, Г.И. Кривицкая, Н.С. Маношкина, Е.А.Казанцев, Н.В.Юрина. Двенадцать сотрудников учреждения награждено знаком «Почетный работник НПО», «Заслуженный учитель РФ» – преподаватель физики Кривицкая Г.И.</p>
+                
+                <p>Наши старшие коллеги внесли огромный вклад в развитие и становление образовательного учреждения: Макарова Т. П., трудившаяся заведующей учебной частью с 1983 по 1996 гг., Хомяков В. Д., преподаватель электротехники 1991-2001 гг., Юнусов Ю. Ф., мастер п/о профессии «Станочник» 1990-2004 гг., Каменева Н. Л. – главный бухгалтер 1985-2003, Мишенин В.И. – мастер п/о профессии «электромонтер».</p>
+                
+                <p>Учащиеся училища активно участвовали в общественной жизни своего учебного заведения, занимались в различных кружках художественной самодеятельности, немало времени уделяли спорту, помогали труженикам села в уборке урожая. Современные учащиеся нашего училища сохраняют преемственность в творческой и спортивной жизни образовательного учреждения, поддерживают положительный имидж, о чем свидетельствуют достижения в творческих и спортивных мероприятиях в различных конкурсах профессионального мастерства.</p>
+                
+                <p>Так в 2001 году победителями профессиональных конкурсов стали отделочники Безглядов Денис и Каркавин Владимир, призерами конкурса стали повара-кондитеры. В 2002 году на конкурсе сварщиков победил Дулин Николай, а в 2010 эту славную традицию продолжил сварщик Дегтярев Александр ставший абсолютным победителем конкурса «Рабочий сплав». В 2012 году призерами профессиональных конкурсов стали электромонтер Балахонов Денис и повар-кондитер Пестерева Людмила.</p>
+                
+                <p>Спортивная команда училища становилась неоднократным призером краевой спартакиады училищ Алтайского края. Творческие коллективы достойно несут знамя побед переданное выпускниками прошлых лет: 2008 - училище обладатель Гран –При конкурса социальных проектов с проектом «Герой труда», который был также награжден премией Президента РФ в рамках ПНПО «Образование», 2009, 2010 годы в конкурсе «Выставка-ярмарка социальных инициатив» творческая группа училища стала абсолютным победителем за материалы выставок «Любимый город на Заре» и «Листая страницы памяти» которые были направлены на федеральный этап конкурса «Арт-Профи форум» в г.Москву авторами и руководителями этих проектов были Зыбин А.М. - заместитель директора по УВР, Зыбина О.В. – педагог-психолог, Беспалова Л.И. – педагог дополнительного образования. Очерк «Повесть о Марии» подготовленный нашими учащимися под руководством Кожевниковой Т.В. посвященный жизни ветерана ВОВ, узнице концлагерей Волобуевой М.А. стал победителем краевого и федерального литературных конкурсов и материалы очерка переданы в музей концлагеря «Освенцим».</p>
+                
+                <p>Преподаватели и мастера нашего училища активно участвуют в творческих конкурсах и научно-исследовательских конференциях. В 2003 году психолог училища Зыбина Оксана Владимировна стала лауреатом краевого конкурса «Сердце отданное детям», Брицова Людмила Ивановна в 2009 году победила на конкурсе профессионального мастерства среди строителей, в 2012 году мастер производственного обучения поваров Охтеменко Ольга Георгиевна заняла 2 место среди поваров-кондитеров в номинации «Теоретический курс».</p>
+                
+                <p>В 2008 году победителями краевой научно-практической конференции стали педагоги: Зыбин А.М.-1 место, Мязина Ю.Ч., Погодаева Н.В. -3 место. 2009 - победителем конференции «Развитие личности в образовательном пространстве: опыт, проблемы, перспективы» стала преподаватель истории Жумадилова Т.К., 2012 на II Межрегиональной научно-практическая конференции педагоги училища: Погодаева Н.В., Мокрушина А.А., Жумадилова Т.К., Зыбина О.В. Половникова О.Н., стали победителями и призерами в своих секциях.</p>
+                
+                <p>Освещая историю Заринского профессионального училища, следовало бы назвать еще много имен, но ограниченные рамки очерка не позволяют этого сделать.</p>
+                
+                <p>Большим уважением среди населения пользовались и пользуются бывшие выпускники: многие из которых успешно трудятся на предприятиях нашего города и края; награждены отраслевыми и краевыми наградами за достойный труд, более 50% сотрудников таких предприятий как ОАО «Алтай-Кокс», ЗАО «Коксохиммонтаж Алтай», МУП «Заринская горэлектросеть» являются выпускниками профессионального училища №41, а некоторые успешно строят профессиональную карьеру и стали ведущими специалистами, руководителями и успешными предпринимателями.</p>
+                
+                <p>Лаговский А. – заместитель главы администрации города Заринска, Белкин А. - президент ассоциации «Водолей», Голубев Е. – мастер коксового отделения коксового цеха ОАО «Алтай-Кокс», Калачев В. – заместитель начальника коксового цеха ОАО «Алтай-кокс», Захаров А. – начальник участка автоматической телефонной связи ОАО «Алтай-Кокс» Кривицкая Н.Г., Ткачева Л.Ю. – преподаватели ПУ-41, Галкина В.Г., Гончарова Е.В. – сотрудники столовой училища и многие другие.</p>
+                
+                <h3>Директора училища</h3>
+                <p>В заключение назовем тех, на чьи плечи лег самый большой груз ответственности за судьбу училища и его учащихся – его директоров.</p>
+                
+                <p>Первые годы директором училища был А.М.Титов. Именно Александр Михайлович заложил совместно с педагогическим коллективом основы качественной профессиональной подготовки рабочих в г.Заринске.</p>
+                
+                <p>С 1990 года во главе училища находился Александр Анатольевич Котовский работавший ранее заместителем директора по УПР.</p>
+                
+                <p>С 2004 года и до настоящего времени директором КГБОУ НПО ПУ-41 является Цаберябая Татьяна Владимировна. За тридцатилетнюю деятельность учебного заведения в городе из его стен вышло свыше девяти тысяч квалифицированных сварщиков, электромонтеров, слесарей, поваров, портных и строителей которые вносят большой вклад в экономику города и края, приумножая добрую славу своего родного училища.</p>
+                
+                <p>Краевое государственное бюджетное образовательное учреждение начального профессионального образования «Профессиональное училище № 41» переименовано на основании Постановления Администрации Алтайского края от 01.07.2014 года № 302 «О переименовании краевых государственных учреждений в сфере образования» в краевое государственное бюджетное профессиональное образовательное учреждение «Заринский политехнический техникум», сокращенно КГБПОУ «Заринский политехнический техникум».</p>
+                
+                <p style="text-align: right; margin-top: 40px;"><strong>Заместитель директора по УВР<br>Зыбин А.М.</strong></p>
+            </div>
+            
+            <!-- 3 КАРТИНКИ В КОНЦЕ РАЗДЕЛА ИСТОРИЯ -->
+            <div class="history-images-grid">
+                <div class="history-img-card">
+                    <img src="http://zpt.edu22.info/includes/history/Titov_Aleksandr_Mihajlovich.gif" alt=" Александр Михайлович Титов">
+                    <div class="history-img-caption">Александр Михайлович Титов</div>
+                </div>
+                <div class="history-img-card">
+                    <img src="http://zpt.edu22.info/includes/history/Kotovskij_Aleksandr_Anatolevich.gif" alt="Александр Анатольевич Котовский">
+                    <div class="history-img-caption">Александр Анатольевич Котовский</div>
+                </div>
+                <div class="history-img-card">
+                    <img src="http://zpt.edu22.info/includes/history/Caberjabaja_Tatjana_Vladimirovna.gif" alt="Цаберябая Татьяна Владимировна">
+                    <div class="history-img-caption">Цаберябая Татьяна Владимировна</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- СПЕЦИАЛЬНОСТИ -->
+<section id="specialties-page" class="section">
+    <div class="container">
+        <h2 class="section__title">Специальности</h2>
+        <div class="specialties-grid">
+            <div class="specialty-card">
+                <h3>Производство и промышленность</h3>
+                <ul>
+                    <li>Слесарь-наладчик КИПиА</li>
+                    <li>Мастер слесарных работ</li>
+                    <li>Сварщик</li>
+                    <li>Сварочное производство</li>
+                </ul>
+            </div>
+            <div class="specialty-card">
+                <h3>Электротехника и энергетика</h3>
+                <ul>
+                    <li>Электромонтер</li>
+                    <li>Монтаж электрооборудования</li>
+                </ul>
+            </div>
+            <div class="specialty-card">
+                <h3>Строительство</h3>
+                <ul>
+                    <li>Мастер общестроительных работ</li>
+                </ul>
+            </div>
+            <div class="specialty-card">
+                <h3>Информационные технологии</h3>
+                <ul>
+                    <li>Оператор информационных систем</li>
+                </ul>
+            </div>
+            <div class="specialty-card">
+                <h3>Лёгкая промышленность</h3>
+                <ul>
+                    <li>Мастер швейных изделий</li>
+                </ul>
+            </div>
+            <div class="specialty-card">
+                <h3>Пищевая промышленность</h3>
+                <ul>
+                    <li>Повар, кондитер</li>
+                </ul>
+            </div>
+        </div>
+        <div class="stats-section">
+            <h2>Результаты наших учеников</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">98%</span>
+                    <p>Сдали демо-экзамен на «хорошо» и «отлично»</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">45</span>
+                    <p>Призовых мест за 3 года</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3</span>
+                    <p>Выпускника открыли своё дело</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- НОВОСТИ С РЕАЛЬНЫМИ КАРТИНКАМИ -->
+<section id="news-page" style="background: linear-gradient(135deg, #f4f1e6, #e8e4d5); padding: 80px 0;">
+    <div class="container">
+        <h2 class="section__title">Новости и события</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <img class="news-img" src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop" alt="встреча с полицией">
+                <div class="news-content">
+                    <div class="news-date">10 апреля 2026</div>
+                    <h3 class="news-title">Будущее в форме</h3>
+                    <p>Встреча с начальником МО МВД «Заринский» полковником Денисом Юрьевичем Слюсарем.</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <img class="news-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop" alt="ЗОЖ">
+                <div class="news-content">
+                    <div class="news-date">10 апреля 2026</div>
+                    <h3 class="news-title">Знания о здоровье — в действии!</h3>
+                    <p>Викторина "Философия ЗОЖ" в рамках акции "Будь здоров".</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <img class="news-img" src="news3.jpeg" alt="конкурс электромонтеров">
+                <div class="news-content">
+                    <div class="news-date">5 апреля 2026</div>
+                    <h3 class="news-title">Под напряжением</h3>
+                    <p>Краевой конкурс профмастерства «Электромонтер» на площадке АО «Алтай-кокс».</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <img class="news-img" src="news4.jpeg" alt="исторические чтения">
+                <div class="news-content">
+                    <div class="news-date">1 апреля 2026</div>
+                    <h3 class="news-title">Подвиг народа бессмертен в веках</h3>
+                    <p>III краевые исторические чтения, посвящённые памяти героев ВОВ.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- РАСПИСАНИЕ С ВЫБОРОМ ПО ГРУППЕ / ПРЕПОДАВАТЕЛЮ -->
+<section id="schedule" class="container" style="margin: 60px auto;">
+    <div class="schedule-section">
+        <h2 class="section__title">Расписание занятий</h2>
+        <div class="schedule-filters">
+            <select id="groupSelect">
+                <option value="МИШИ-24">Группа МИШИ-24</option>
+                <option value="Сл-Кип-24">Группа Сл-Кип-24</option>
+                <option value="ИСИП-24">Группа ИСИП-24</option>
+                <option value="Преподаватели">Преподаватели (общий список)</option>
+            </select>
+            <button id="loadScheduleBtn">Показать расписание</button>
+        </div>
+        <div id="scheduleDisplay" class="schedule-table"></div>
+    </div>
+</section>
+
+<!-- ФОРМЫ СЛАЙДЕРА -->
+<div class="container">
+    <section class="slider-section">
+        <div class="slide slide-open-day active" id="slide1">
+            <div class="open-day-form">
+                <form id="openDayForm">
+                    <div class="form-field">
+                        <label>Ваше имя</label>
+                        <input type="text" id="odName" required>
+                    </div>
+                    <div class="form-field">
+                        <label>Телефон</label>
+                        <input type="tel" id="odPhone" required>
+                    </div>
+                    <div class="form-field">
+                        <label>Email</label>
+                        <input type="email" id="odEmail" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Записаться</button>
+                </form>
+            </div>
+            <div class="open-day-card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="день открытых дверей">
+            </div>
+        </div>
+        <div class="slide slide-application" id="slide2">
+            <div class="application-form">
+                <h2>Заявление онлайн</h2>
+                <form id="onlineForm">
+                    <div class="form-group">
+                        <label>ФИО *</label>
+                        <input type="text" id="appFio" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон *</label>
+                        <input type="tel" id="appPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" id="appEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Специальность</label>
+                        <select id="appSpecialty">
+                            <option>Слесарь-наладчик КИПиА</option>
+                            <option>Сварщик</option>
+                            <option>Повар, кондитер</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <div class="arrow-control" onclick="changeSlide(-1)">&#8592;</div>
+            <div class="dot active" onclick="currentSlide(1)"></div>
+            <div class="dot" onclick="currentSlide(2)"></div>
+            <div class="arrow-control" onclick="changeSlide(1)">&#8594;</div>
+        </div>
+    </section>
+</div>
+
+<!-- АБИТУРИЕНТУ -->
+<section id="admission-block" class="admission-section">
+    <div class="container">
+        <h2 class="section__title">Абитуриенту</h2>
+        <div class="admission-grid">
+            <div class="admission-card">
+                <h3>📋 Как поступить</h3>
+                <ol>
+                    <li>Выберите специальность</li>
+                    <li>Подготовьте документы: паспорт, аттестат, фото</li>
+                    <li>Подайте документы в приёмную комиссию</li>
+                    <li>Пройдите вступительные испытания (если требуется)</li>
+                    <li>Получите приказ о зачислении</li>
+                </ol>
+            </div>
+            <div class="admission-card">
+                <h3>📞 Приёмная комиссия</h3>
+                <p><strong>Адрес:</strong> ул. Ленина, 15, Заринск</p>
+                <p><strong>Телефон:</strong> +7 (38595) 2-22-44</p>
+                <p><strong>Email:</strong> priem@zpt22.ru</p>
+                <p><strong>Часы работы:</strong> Пн-Пт: 9:00 - 17:00</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contacts-page" class="section">
+    <div class="container">
+        <h2 class="section__title">Контакты</h2>
+        <div class="contacts-grid">
+            <div class="contacts-info">
+                <h2>Как нас найти</h2>
+                <p><strong>Адрес:</strong> Алтайский край, г. Заринск, ул. Ленина, д. 15</p>
+                <p><strong>Телефон:</strong> +7 (38595) 2-22-43</p>
+                <p><strong>Приёмная комиссия:</strong> +7 (38595) 2-22-44</p>
+                <p><strong>Email:</strong> zpt@22edu.ru</p>
+                <p><strong>Режим работы:</strong> Пн-Пт: 8:00 - 17:00</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=84.9178,53.7026&z=16&pt=84.9178,53.7026&text=%D0%B7%D0%B0%D1%80%D0%B8%D0%BD%D1%81%D0%BA%20%D1%83%D0%BB.%20%D0%BB%D0%B5%D0%BD%D0%B8%D0%BD%D0%B0%2015"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Контакты</h3>
+            <p>+7 (38595) 2-22-43</p>
+            <p>priem@zpt22.ru</p>
+        </div>
+        <div class="footer-section">
+            <h3>Адрес</h3>
+            <p>г. Заринск, ул. Ленина, 15</p>
+        </div>
+        <div class="footer-section">
+            <h3>Быстрые ссылки</h3>
+            <a href="#home">Главная</a>
+            <a href="#history">История</a>
+            <a href="#schedule">Расписание</a>
+            <a href="#news-page">Новости</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Заринский политехнический техникум. Все права защищены.</p>
+    </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop">↑</button>
+
+<script>
+    // === Слайдер ===
+    let slideIndex = 1;
+    function changeSlide(n) { showSlide(slideIndex += n); }
+    function currentSlide(n) { showSlide(slideIndex = n); }
+    function showSlide(n) {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+        for (let i = 0; i < slides.length; i++) { 
+            slides[i].style.display = "none"; 
+            slides[i].classList.remove("active"); 
+        }
+        for (let i = 0; i < dots.length; i++) { 
+            dots[i].className = dots[i].className.replace(" active", ""); 
+        }
+        if (slides[slideIndex-1]) { 
+            slides[slideIndex-1].style.display = "flex"; 
+            slides[slideIndex-1].classList.add("active"); 
+            dots[slideIndex-1].className += " active"; 
+        }
+    }
+    showSlide(slideIndex);
+
+    // === Уведомления ===
+    function showToast(msg) { 
+        alert(msg); 
+    }
+
+    document.getElementById('openDayForm')?.addEventListener('submit', (e) => { 
+        e.preventDefault(); 
+        showToast("Запись на День открытых дверей оформлена!"); 
+    });
+    
+    document.getElementById('onlineForm')?.addEventListener('submit', (e) => { 
+        e.preventDefault(); 
+        showToast("Заявление принято! Мы свяжемся с вами."); 
+    });
+
+    // === ДАННЫЕ РАСПИСАНИЯ ===
+    const scheduleData = {
+        "МИШИ-24": { 
+            понедельник: ["0 пара: Классный час (без номера)"], 
+            вторник: ["1-5: ПП"], 
+            среда: ["1-5: ПП"], 
+            четверг: ["1-5: ПП"], 
+            пятница: ["1-5: ПП"] 
+        },
+        "Сл-Кип-24": { 
+            понедельник: ["0 пара: Классный час (без номера)"], 
+            вторник: ["1-5: ПП"], 
+            среда: ["1-5: ПП"], 
+            четверг: ["1-5: ПП"], 
+            пятница: ["1-5: ПП"] 
+        },
+        "ИСИП-24": {
+            понедельник: ["0 пара: Классный час"],
+            вторник: ["1: ОП (каб.18)", "2: Ин.яз (каб.50/60)", "3: МДК (каб.61)", "4: МДК (каб.61)"],
+            среда: ["1: Осн.алг (каб.61)", "2: МДК (каб.61)", "3: ЭВМ (каб.63)"],
+            четверг: ["1: МДК (каб.61)", "2: МДК (каб.61)", "3: ЭВМ (каб.63)", "4: БЖД (каб.18)"],
+            пятница: ["1: БЖД (каб.18)", "2: Чис.мет (каб.61)", "3: МДК (каб.61)", "4: Ин.яз (каб.50/64)"]
+        },
+        "Преподаватели": { 
+            понедельник: "Расписание преподавателей можно уточнить в учебной части.", 
+            вторник: "", 
+            среда: "", 
+            четверг: "", 
+            пятница: "" 
+        }
+    };
+
+    function getTimeForDay(day, lessonNum) {
+        const isMonday = day === "понедельник";
+        const times = { 
+            "0": isMonday ? "8:00-8:40 / 8:50-9:35" : "8:00-8:45 / 8:50-9:35", 
+            "1": isMonday ? "9:40-10:25 / 10:40-11:25" : "9:45-10:30 / 10:45-11:30", 
+            "2": isMonday ? "11:45-12:30 / 12:40-13:25" : "11:50-12:35 / 12:40-13:25", 
+            "3": isMonday ? "13:30-14:15 / 14:25-15:10" : "13:35-14:20 / 14:25-15:10", 
+            "4": isMonday ? "15:15-16:00 / 16:10-16:55" : "15:20-16:05 / 16:10-16:55" 
+        };
+        return times[lessonNum] || "";
+    }
+
+    function renderSchedule(group) {
+        const data = scheduleData[group];
+        if (!data) return "<p>Нет данных для этой группы</p>";
+        if (group === "Преподаватели") return `<p>${data.понедельник}</p><p>По всем вопросам расписания обращайтесь в учебную часть (каб. 18).</p>`;
+        
+        let html = '<table><thead><tr><th>День</th><th>Пары (время)</th></tr></thead><tbody>';
+        const days = ["понедельник","вторник","среда","четверг","пятница"];
+        
+        days.forEach(day => {
+            let lessons = data[day] || [];
+            html += `<tr><td><strong>${day.charAt(0).toUpperCase() + day.slice(1)}</strong></td><td>`;
+            lessons.forEach((l, idx) => {
+                let lessonNum = idx;
+                let time = getTimeForDay(day, lessonNum);
+                html += `<div class="lesson">${l} ${time ? `(${time})` : ''}</div>`;
+            });
+            if (lessons.length === 0) html += "—";
+            html += `</td></tr>`;
+        });
+        html += '</tbody></table>';
+        return html;
+    }
+
+    document.getElementById('loadScheduleBtn')?.addEventListener('click', () => {
+        const group = document.getElementById('groupSelect').value;
+        const scheduleDiv = document.getElementById('scheduleDisplay');
+        if (scheduleDiv) scheduleDiv.innerHTML = renderSchedule(group);
+    });
+    
+    // Загрузить расписание по умолчанию
+    document.getElementById('loadScheduleBtn')?.click();
+
+    // Активная ссылка, кнопка вверх
+    window.addEventListener('scroll', () => { 
+        document.getElementById('scrollTop')?.classList.toggle('show', window.scrollY > 400); 
+    });
+    
+    document.getElementById('scrollTop')?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); 
+    });
+    
+    document.querySelectorAll('.nav-bar a').forEach(link => {
+        link.addEventListener('click', function(e) { 
+            if(this.hash) { 
+                e.preventDefault(); 
+                document.querySelector(this.hash)?.scrollIntoView({ behavior: 'smooth' }); 
+            } 
+        });
+    });
+</script>
+</body>
+</html>
